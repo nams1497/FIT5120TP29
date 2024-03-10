@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Safety</title>
+
+    <!-- connect to CSS-->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <!-- 1. A Bar on the top of page-->
+    <header class="background-1">
+        <nav>
+            <h1 class="team-name-header">Sun Safety In Victoria</h1>
+            <div class="header-right">
+                
+              <h2><a href="#" id="data-visualization-link">Data Visualization</a></h2>
+              <h2><a href="#about-us-footer">About Us</a></h2>
+            </div>
+          </nav>
+    </header>
+
+    <!-- 2. Main Content -->
+    <main>
+        <!-- 2.1. DESIGN: Hero Banner -->
+        <div class="hero-image background-1">
+            <img src="resource/image/hero-banner.png" alt="Hero Banner">
+        </div>
+
+
+        <!-- 2.2. FEATURE: Location Search -->
+        <div class="location-search-box background-1">
+            <form id="post-code-form">
+            <!-- LOCATION DISPLAY HERE after entering right postcode -->    
+            <h1>Tell us where are you: <span id="location">--</span></h1>
+            <input type="number" id="post-code-input" placeholder="Enter 4-digit PostCode" maxlength="4" pattern="\d{4}" required>
+            <button type="button">Search</button>
+            </form>
+        </div>
+
+        <!-- 2.3. 4-FEATURE Module -->
+        <!-- The page will Jump to related part when user click any logo -->
+        <div class="features-module background-1">
+            <div class="modules">
+              <a href="#uv-index-section" class="module">
+                <img src="resource\image\UV-index-logo.png" alt="UV Index">
+              </a>
+              <a href="#clothing-section" class="module">
+                <img src="resource\image\cloth-recommendation-logo.png" alt="Clothing">
+              </a>
+              <a href="#sunscreen-section" class="module">
+                <img src="resource\image\sunscreen-amount-logo.png" alt="Sunscreen">
+              </a>
+              <a href="#reminder-section" class="module">
+                <img src="resource\image\reminder-logo.png" alt="Reminder"> 
+              </a>
+            </div>
+        </div>
+
+          <!-- 2.4. 4-Main-FEATURE Details -->
+          <!-- Attention this large part should be hidden without any correct postcode -->
+          <div class="content-after-postcode" style="display: none;">
+
+
+            <!-- 2.4.1. FEATURE: UV Index -->
+            <div class="uv-index-section background-2" id="uv-index-section">
+                <h1>UV Index</h1>
+                <!-- There are 2 parts：real-time UV index number and a photo about UV index information-->
+                <div class="real-time-uv-index">
+                    <h3>The current UV index at your location is: <span id="uv-index-backend">--</span></h3>
+                </div>
+
+                <div class="uv-index-infographic">
+                    <img src="resource\image\UV-index-info.png" alt="uv index info">
+                </div>
+            </div>
+        
+            <!-- 2.4.2. FEATURE: Clothing Recommendation -->
+            <div class="clothing-recommendation-section background-3" id="clothing-section">
+                <h1>Cloth Recommendation</h1>
+                <!-- There are 2 parts：options and recommendation-->
+                <select id="skin-type-cr">
+                  <option value="Default">Default</option>
+                  <option value="Sensitive Skin">Sensitive Skin</option>
+                </select>
+              
+                <div class="clothing-recommendation-content">
+                  <!-- Display cloth here -->
+                </div>
+            </div>
+        
+            <!-- 2.4.3. FEATURE: Sunscreen Amount -->
+            <div class="sunscreen-amount-section background-4" id="sunscreen-section">
+                <h1>Sunscreen Amount</h1>
+                <!-- There are 2 parts: options and amount suggestion-->
+                <select id="user-type-ss">
+                    <option value="Baby">Baby</option>
+                    <option value="Children/Teenager">Children/Teenager</option>
+                    <option value="Adult">Adult</option>
+                </select>
+
+                <div class="sunscreen-amount-content">
+                    <!-- Display tips and amount here-->
+                    <h3>Tips: <span id="sunscreen-tips-js">--</span></h3>
+                    <h3>The recommended amount of sunscreen to use through calculation is: <span id="sunscreen-amount-backend">--</span>.</h3>
+                  </div>
+              
+            </div>
+
+            <!-- 2.4.4. FEATURE: Reminder -->
+            <div class="reminder-section background-5" id="reminder-section">
+                <h1>Reminder</h1>
+                <div class="reminder-bar">
+                    <button id="create">Create</button>
+                    <button id="view-history">View History</button>
+                </div>
+
+                <div class="reminder-list">
+                    <!-- Display Reminder List  -->
+                    <ul id="reminder-list-ul"></ul>
+                </div>
+            </div>
+          </div>
+    </main>
+
+    <!-- 3. footer ABOUT US -->
+    <footer class="background-6" id="about-us-footer">
+        <div class="footer">
+            <h1>About Us</h1>
+            <ul class="team-members">
+                <h3>Onboarding Project TP29</h3>
+                <h3>Anqi Chen 33209707</h3>
+                <h3>Eishi Sano 32683235</h3>
+                <h3>Namrata 33193339</h3>
+                <h3>Rohan Singh 31339646</h3>
+                <h3>Zhuyun Chen 33292108</h3>
+            </ul>
+        </div>
+    </footer>  
+
+
+    <!-- 4. Modal -->
+    <!-- 4.1 Error Modal -->
+    <div id="error-modal" class="error-modal">
+      <div class="error-modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-error-message">Wrong Postcode!</p>
+      </div>
+    </div>
+
+
+
+    <!-- 4.2 Set Reminder Modal-->
+    <div id="reminder-modal" class="reminder-modal">
+      <div class="reminder-modal-content">
+        <span class="close">&times;</span>
+          <h2>Set Reminder</h2>
+          <form id="reminder-form">
+              <p>Date: <span id="reminder-date"></span></p>
+              <label for="reminder-time">Time:</label>
+              <input type="time" id="reminder-time" name="reminder-time" required>
+              <label for="reminder-note">Note:</label>
+              <input type="text" id="reminder-note" name="reminder-note" placeholder="Note" maxlength="50">
+              <button type="submit" id="reminder-save">Save</button>
+          </form>
+      </div>
+    </div>
+
+
+    <!-- 4.3 Reminder Message Modal-->
+    <div id="reminder-message-modal" class="reminder-message-modal">
+      <div class="reminder-message-modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-reminder-message-line1">Attention</p>
+        <p id="modal-reminder-message-line2">It is time to REAPPLY sunscreen</p>
+      </div>
+    </div>
+
+
+    <!-- 4.4 View History Modal-->
+    <div id="view-history-modal" class="view-history-modal">
+      <div class="view-history-modal-content">
+        <span class="close">&times;</span>
+        <h2>Reminder History</h2>
+        <div class="vh-chart-container" id="view-history-chart"></div>
+      </div>
+    </div>
+
+
+    <!-- 4.5 Data Visualization Modal-->
+    <div id="data-visualization-modal" class="data-visualization-modal">
+      <div class="data-visualization-modal-content">
+        <span class="close">&times;</span>
+        <h2>Data Visualization</h2>
+        <div class="dv-chart-container" id="data-visualization-chart"></div>
+      </div>
+    </div>
+    
+    <!-- connect to JavaScript-->
+    <script src="main.js"></script>
+</body>
+</html>
