@@ -1,0 +1,559 @@
+/* 1. Background and Font*/
+/* Set the background color based on ORANGE as the main tone, and it's gradient like UV index. */
+  .background-1 {
+    background: #FFCC80;
+  }
+  
+  .background-2 {
+    background: linear-gradient(to bottom, #FFCC80, #FFB266);
+  }
+  
+  .background-3 {
+    background: linear-gradient(to bottom, #FFB266,#FF994D);
+  }
+  
+  .background-4 {
+    background: linear-gradient(to bottom, #FF994D, #FF8033);
+  }
+  
+  .background-5 {
+    background: linear-gradient(to bottom, #FF8033, #FF661A);
+  }
+  
+  .background-6 {
+    background: #FF661A;
+  }
+
+
+/* font and color */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #f0f0f0;  
+  }
+  
+  h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 5em;
+    color: #ffffff; 
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 3em;
+    color: #ffffff;  
+    margin-bottom: 15px;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+    color: #ffffff; 
+    margin-bottom: 10px;
+  }
+
+/* Style for all close buttons */
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Adjust the layout of each section. */
+/* 2. Header */
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-left {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  h1.team-name-header {
+    margin: 0;
+  }
+  
+  .header-right {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .header-right h2 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .header-right a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+
+/* 3. Banner */
+.hero-image {
+    text-align: center; 
+    width: 100%; 
+    overflow: hidden; 
+  }
+  
+  .hero-image img {
+    width: auto; 
+    height: auto; 
+    display: inline-block; 
+  }
+  
+
+/* 4. Location Search */
+.location-search-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .location-search-box h1 {
+    margin-bottom: 20px;
+  }
+  
+  .location-search-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .location-search-box input,
+  .location-search-box button {
+    font-size: 1.2em;
+    padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .location-search-box button {
+    background-color: #ffffff;
+    color: #FF5733;
+    cursor: pointer;
+  }
+  
+  .location-search-box button:hover {
+    background-color: #FF5733;
+    color: #ffffff;
+  }
+
+/* 5. 4-FEATURE Module */
+.features-module {
+    padding: 20px;
+  }
+  
+  .modules {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .module {
+    flex-basis: 20%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .module img {
+    width: 100%;
+    max-width: 200px;  
+    height: auto;
+  }  
+
+
+/* 6. FEATURE: UV Index */
+.uv-index-section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .uv-index-section h1 {
+    margin-bottom: 20px;
+  }
+  
+  .real-time-uv-index {
+    margin-bottom: 20px;
+  }
+  
+  .uv-index-infographic img {
+    width: 100%;
+    max-width: 1000px;  
+    height: auto;
+    margin: 0 auto;
+  }
+
+
+/* 7. Clothing Recommendation */
+.clothing-recommendation-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.clothing-recommendation-section h1 {
+  margin-bottom: 20px;
+}
+
+.clothing-recommendation-section select {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1em;
+}
+.clothing-recommendation-content {
+  text-align: center;  
+}
+
+.clothing-recommendation-content h3 {
+  display: block;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  max-width: 60%; 
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #ffffff;
+  color: #333;
+  max-height: 9em; 
+  overflow: auto; 
+  font-size: 1.2em;
+  }
+
+/* 8. Sunscreen Amount */
+.sunscreen-amount-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.sunscreen-amount-section h1 {
+  margin-bottom: 20px;
+}
+
+.sunscreen-amount-section select {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.sunscreen-amount-content {
+  text-align: center;
+}
+
+.sunscreen-amount-content h3 {
+  display: block;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  max-width: 60%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Limit the height of the tips text box */
+.sunscreen-amount-content h3.tips {
+  max-height: 4.5em; 
+  overflow: auto; 
+  }
+
+
+/* 9. Reminder */
+.reminder-section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .reminder-section h1 {
+    margin-bottom: 20px;
+  }
+  
+  .reminder-bar {
+    margin-bottom: 20px;
+  }
+  
+  .reminder-bar button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ffffff;
+    color: #FF5733;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .reminder-bar button:hover {
+    background-color: #FF5733;
+    color: #ffffff;
+  }
+  
+  .reminders {
+    text-align: center;
+  }
+ 
+.reminder-list h3 {
+  display: block;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  max-width: 60%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#reminder-list-ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#reminder-list-ul li {
+  background-color: #ffffff;
+  color: #333;
+  padding: 10px;
+  margin: 0 auto 5px;
+  border-radius: 5px;
+  width: 66.67%;
+  box-sizing: border-box;
+}
+
+/* 10. Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+footer h1 {
+  margin-bottom: 20px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.team-members h3 {
+  width: 33.33%;
+  margin-bottom: 20px;
+}
+
+
+/* 11. Error Modal */
+.error-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; /* Enable scroll */
+  background-color: rgba(0,0,0,0.4); 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.error-modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+  position: relative;
+  display: flex;
+
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  color: black; 
+  flex-direction: column; 
+}
+
+/* 12. Reminder Modal */
+.reminder-modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; /* Enable scroll*/
+  background-color: rgba(0,0,0,0.4); 
+
+  justify-content: center; 
+  align-items: center; 
+}
+
+.reminder-modal-content {
+  background-color: #fefefe; 
+  color: #000; 
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; 
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#reminder-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#reminder-form > label {
+  margin-top: 10px;
+}
+
+#reminder-form > input, #reminder-form > button {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd; 
+}
+
+#reminder-form > button {
+  background-color: #fefefe; 
+  color: #000;
+  border: 1px solid #000; 
+  cursor: pointer;
+}
+
+#reminder-form > button:hover {
+  background-color: #f8f8f8; 
+}
+
+/* 13. Reminder Message Modal */
+.reminder-message-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.reminder-message-modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  flex-direction: column;
+}
+
+
+/* 14. Reminder Delete Button */
+.delete-button {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 180px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-button:hover {
+  background-color: #cc0000;
+}
+
+/* 15. View History Container */
+#view-history-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+}
+
+#view-history-image {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  height: auto;
+}
+
+
+/* 16. Data Visualization Container */
+#data-visualization-container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+#data-visualization-container img {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
